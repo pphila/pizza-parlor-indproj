@@ -32,11 +32,11 @@ Expected Output: Pizza {size: "large"}
 
 Test: "It should return a topping and a size"
 Code: const pizza = new Pizza("large", "cheese")
-Expected Output Pizza {size: "large", topping: "cheese"}
+Expected Output: Pizza {size: "large", topping: "cheese"}
 
-Test:
-Code:
-Expected Output
+Test: "It should return a size, topping, and crust"
+Code: " const pizza = new Pizza("large, "pepperoni", "thin")
+Expected Output: Pizza {size: "large", topping: "pepperoni", crust: "thin"}
 
 Test:
 Code:
