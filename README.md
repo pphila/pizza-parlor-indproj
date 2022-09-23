@@ -29,3 +29,19 @@ Describe: Pizza()
 Test: "It should return an object with first property of size."
 Code: const pizza = new Pizza("large");
 Expected Output: Pizza {size: "large"}
+
+Test: "It should return a topping and a size"
+Code: const pizza = new Pizza("large", "cheese")
+Expected Output Pizza {size: "large", topping: "cheese"}
+
+Test:
+Code:
+Expected Output
+
+Test:
+Code:
+Expected Output
+
+Test:
+Code:
+Expected Output

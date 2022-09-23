@@ -1,4 +1,4 @@
-function Pizza(size, toppings) {
+function Pizza(size) {
   this.size = size;
-  console.log(Pizza());
+  console.log(size);
 }
