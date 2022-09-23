@@ -1,7 +1,10 @@
 function Pizza(size, crust, toppings) {
   this.size = size;
   this.crust = crust;
-  this.topping = toppings;
-  console.log(size, crust, toppings)
+  this.toppings = toppings;
 }
 
+Pizza.prototype.toppingsArr = function () {
+  const choiceToppings = ["vegan cheese", "pepperoni", "sausage", "canadian bacon", "mushroom", "green pepper", "pineapple"];
+  return choiceToppings;
+}
