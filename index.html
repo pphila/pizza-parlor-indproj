@@ -19,27 +19,27 @@
     <hr>
   </section>
 
-  <section id="about-info">
+  <section>
     <div id="about">
       <h2>It has the juice!</h2>
       <p>I can't imagine a more beautiful thing.</p>
       <img src="https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/05115946/night-owl-radio-014.jpg" alt="night owl logo">
-      <p>Night Owl Pizza's for you night owls</p>
+      <p>Night Owl Pizza's for those who are still up for the afters</p>
       <p>Fri - Sun 8pm - 3am</p>
       <p>Closed Mon - Thurs</p>
     </div>
   </section>
   
   <div class="container">
-    <h2 id="order-btn"><button type="button" class="btn">Order</button></h2>
+    <h2 id="order-btn"><button type="button" class="btn">Order Online!</button></h2>
     <div id="pizza-order" class="hidden">
       <form id="customer-order">
         <div class ="size-selector">
           <h3 id="p-size">Pizza Size</h3>
           <select class="size-form" id="pizza-size">
-            <option value="sm">Personal(small)</option>
-            <option value="med">Medium</option>
-            <option value="lg">Large</option>
+            <option value="small">Personal(small)</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
           </select>
         </div>
         <br>
@@ -47,29 +47,29 @@
           <h3 id="p-crust">Crust</h3>
           <select class="crust-form" id="crust">
             <option value="thin">Thin</option>
-            <option value="reg">Traditional</option>
-            <option value="thick">Detroit Thicc</option>
-            <option value="veg">Vegan</option>
+            <option value="traditional">Traditional</option>
+            <option value="thicc">Detroit Thicc</option>
+            <option value="vegan">Vegan</option>
           </select>
         </div>
         <br>
         <div class="topp-selector">
           <h3 id="p-topps">Toppings</h3>
-          <input type="checkbox" id="vegan-ch" name="topping" value="vegan-ch">
+          <input type="checkbox" id="vegan-ch" name="topping" value="vegan cheese">
           <label for="vegan-ch">Vegan cheese</label>
-          <input type="checkbox" id="mozz" name="topping" value="mozz">
+          <input type="checkbox" id="mozz" name="topping" value="mozzarella">
           <label for="mozz">Mozzarella</label>
           <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
           <label for="peppe">Pepperoni</label>
           <input type="checkbox" id="sausage" name="topping" value="sausage">
           <label for="sausage">Sausage</label>
-          <input type="checkbox" id="can-b" name="topping" value="can-b">
+          <input type="checkbox" id="can-b" name="topping" value="canadian bacon">
           <label for="can-b">Canadian Bacon</label>
-          <input type="checkbox" id="mushy" name="topping" value="mushy">
+          <input type="checkbox" id="mushy" name="topping" value="mushrooms">
           <label for="mushy">Mushrooms</label>
-          <input type="checkbox" id="grn-pepp" name="topping" value="grn-pepp">
+          <input type="checkbox" id="grn-pepp" name="topping" value="green peppers">
           <label for="grn-pepp">Green Peppers</label>
-          <input type="checkbox" id="pineapp" name="topping" value=" pineapp">
+          <input type="checkbox" id="pineapp" name="topping" value=" pineapples">
           <label for="pineapp">Pineapple</label>
         </div>
         <button type="submit" class="btn">Submit Order</button>
@@ -78,9 +78,9 @@
 
     <div class="container">
       <div id="order-total" class="hidden">
-        <h2>button>Your Order</h2>
+        <h2>Your Order</h2>
         <p>A <span class="return-size"></span></p>
-        <p> <span class="return-crust"></span></p>
+        <p> <span class="return-crust"></span> crust pizza </p>
         <p>with <span class="return-toppings"></span></p>
         <p>comes to: <span class="return-total"></span></p>
       </div>

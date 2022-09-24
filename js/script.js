@@ -8,34 +8,34 @@ function Pizza(size, crust, toppings) {
 
 Pizza.prototype.pizzaCost = function () {
   let defaultPrice = 10;
-  const choiceToppings = ["vegan-ch", "mozz", "pepperoni", "sausage", "can-b", "mushy", "grn-pepp", "pineapp"];
+  const choiceToppings = ["vegan cheese", "mozzarella", "pepperoni", "sausage", "canadian bacon", "mushrooms", "green peppers", "pineapples"];
   this.toppings.forEach(function (topping) {
     if(choiceToppings.includes(topping)) {
       defaultPrice += 2;
     }
   });
-  if (this.size === "sm") {
+  if (this.size === "small") {
     defaultPrice += 0;
-  } else if (this.size === "med") {
+  } else if (this.size === "medium") {
     defaultPrice += 3;
-  } else if (this.size === "lg") {
+  } else if (this.size === "large") {
     defaultPrice += 5;
   };
   if (this.crust === "thin") {
     defaultPrice += 2;
-  } else if (this.crust === "reg") {
+  } else if (this.crust === "traditional") {
     defaultPrice += 3;
-  } else if (this.crust === "thick") {
+  } else if (this.crust === "thicc") {
     defaultPrice += 4;
-  } else if (this.crust === "veg") {
+  } else if (this.crust === "vegan") {
     defaultPrice += 5;
   };
   return defaultPrice;
 }
 
-Pizza.prototype.fullOrder = function () {
+/*Pizza.prototype.fullOrder = function () {
   return this.size + " " + this.size + " with " + this.toppings;
-}
+}*/
 
 //User Interface Logic
 
@@ -77,5 +77,5 @@ function handleOrderSubmit(event) {
 
 window.addEventListener("load", function() {
   document.querySelector("form#customer-order").addEventListener("submit", handleOrderSubmit);
-  this.document.getElementById("order-btn").addEventListener("click", showOrderForm());
+  document.querySelector("button.btn").addEventListener("click", showOrderForm);
 })

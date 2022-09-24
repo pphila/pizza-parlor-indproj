@@ -3,6 +3,22 @@
 body {
   background-color: black;
   color: whitesmoke;
+  font-weight: 600;
+  display: gird;
+}
+
+//.hidden {
+  display: none;
+}
+
+.btn {
+  font-size: 2rem;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
 }
 
 /*Header section*/
@@ -12,14 +28,31 @@ body {
   font-weight: 600;
 }
 
-.hidden {
-  display: none;
-}
-
 #about {
   text-align: center;
+  margin: 15px;
+  padding: 10px;
+  font-size
 }
 
+#about h2 {
+  font-size: 4rem;
+  margin: 8px;
+}
+
+#about p {
+  font-size: 2rem;
+}
 #about img {
   height: 600px;
+}
+
+/*Form Section*/
+#pizza-order {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+label {
+  padding: 15px;
 }
