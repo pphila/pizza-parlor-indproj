@@ -33,10 +33,23 @@ Pizza.prototype.pizzaCost = function () {
   return defaultPrice;
 }
 
+Pizza.prototype.fullOrder = function () {
+  return this.size + " " + this.size + " with " + this.toppings;
+}
+
 //User Interface Logic
-let pizzaOrder = new Pizza();
 
-
+/*function listOrder(orderTodisplay) {
+  let orderTotalDiv = document.querySelector("div#order-total");
+  orderTotalDiv.innerText = null;
+  const totalH2 = document.createElement("h2");
+  Object.keys(orderTodisplay.Pizza).forEach(function(key) {
+    const order = orderTodisplay.pizzaCost(key);
+    const li = document.createElement("li");
+    li.append(order.fullOrder());
+    totalH2.append(li);
+  });
+}*/
 
 function handleOrderSubmit(event) {
   event.preventDefault();
@@ -48,9 +61,15 @@ function handleOrderSubmit(event) {
   toppingsArr.push(selectedToppings[i].value)
   };
   const newOrder = new Pizza(selectedSize, selectedCrust, selectedToppings);
-  console.log(newOrder);
+  let totalCost = newOrder.pizzaCost();
+  let viewToppings = toppingsArr.join(", ");
+  document.querySelector(".return-size").innerText = selectedSize;
+  document.querySelector(".return-crust").innerText = selectedCrust;
+  document.querySelector(".retun-toppings").innerText = viewToppings;
+  document.querySelector(".return-total").innerText = totalCost;
 }
 
 window.addEventListener("load", function() {
   document.querySelector("form#customer-order").addEventListener("submit", handleOrderSubmit);
+  document.getElementById("order-total").removeAttribute("class");
 })
