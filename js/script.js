@@ -1,3 +1,5 @@
+//Business Logic
+
 function Pizza(size, crust, toppings) {
   this.size = size;
   this.crust = crust;
@@ -11,6 +13,23 @@ Pizza.prototype.pizzaCost = function () {
     if(choiceToppings.includes(topping)) {
       defaultPrice += 2;
     }
-    return pizzaCost();
+    return defaultPrice;
   })
+  console.log(defaultPrice);
 }
+
+//User Interface Logic
+
+function handleOrderSubmit(event) {
+  event.preventDefault();
+  const selectedSize = document.getElementById("pizza-size").value;
+  const selectedCrust = document.getElementById("crust").value;
+  let toppingsArr = [];
+  let selectedToppings = document.querySelector("input[name='topping']:checked").each(function () {
+    let topping = 
+  });
+}
+
+window.addEventListener("load", function() {
+  document.querySelector("form#customer-order").addEventListener("submit", handleOrderSubmit);
+})
