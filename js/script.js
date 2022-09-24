@@ -1,6 +1,6 @@
 //Business Logic
 
-function Pizza(size, crust, toppings) {
+function Pizza(size, crust, toppings = []) {
   this.size = size;
   this.crust = crust;
   this.toppings = toppings;
@@ -8,27 +8,24 @@ function Pizza(size, crust, toppings) {
 
 Pizza.prototype.pizzaCost = function () {
   let defaultPrice = 10;
-  const choiceToppings = ["vegan cheese", "mozzarella", "pepperoni", "sausage", "canadian bacon", "mushrooms", "green peppers", "pineapples"];
-  this.toppings.forEach(function (topping) {
-    if(choiceToppings.includes(topping)) {
-      defaultPrice += 2;
-    }
+  this.toppings.forEach(function (toppings, index) {
+    defaultPrice = (index + 1) * 2;
   });
   if (this.size === "small") {
     defaultPrice += 0;
   } else if (this.size === "medium") {
-    defaultPrice += 3;
+    defaultPrice += 13;
   } else if (this.size === "large") {
-    defaultPrice += 5;
+    defaultPrice += 15;
   };
   if (this.crust === "thin") {
-    defaultPrice += 2;
+    defaultPrice += 12;
   } else if (this.crust === "traditional") {
-    defaultPrice += 3;
+    defaultPrice += 13;
   } else if (this.crust === "thicc") {
-    defaultPrice += 4;
+    defaultPrice += 14;
   } else if (this.crust === "vegan") {
-    defaultPrice += 5;
+    defaultPrice += 15;
   };
   return defaultPrice;
 }
@@ -60,7 +57,7 @@ function handleOrderSubmit(event) {
   const selectedSize = document.getElementById("pizza-size").value;
   const selectedCrust = document.getElementById("crust").value;
   const toppingsArr = [];
-  const selectedToppings = document.querySelectorAll("input[name='topping']:checked");
+  const selectedToppings = document.querySelectorAll("input[type=checkbox][name='topping']:checked");
   for (let i=0; i<selectedToppings.length; i++) {
   toppingsArr.push(selectedToppings[i].value)
   };
