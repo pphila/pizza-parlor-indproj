@@ -1,8 +1,25 @@
+/*global*/
+
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/*Header section*/
 .jumbotron {
   text-align: center;
   margin: 20px;
+  font-weight: 600;
 }
 
 .hidden {
   display: none;
+}
+
+#about {
+  text-align: center;
+}
+
+#about img {
+  height: 600px;
 }

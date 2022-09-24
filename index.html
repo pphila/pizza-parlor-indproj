@@ -7,24 +7,33 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/script.js"></script>
-  <title>Pizza Parlor</title>
+  <title>Night Owl Pizza</title>
 </head>
 <body>
-  <div class="jumbotron">
-    <header>
-      <h1>It's Pizza!</h1>
-    </header>
-  </div>
-  <hr>
-  <div id="about">
-    <h2>It has the juice!</h2>
-    <p>I can't imagine a more beautiful thing</p>
-  </div>
+  <section id="header">
+    <div class="jumbotron">
+      <header>
+        <h1>It's Night Owl Pizza!</h1>
+      </header>
+    </div>
+    <hr>
+  </section>
+
+  <section id="about-info">
+    <div id="about">
+      <h2>It has the juice!</h2>
+      <p>I can't imagine a more beautiful thing.</p>
+      <img src="https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/05115946/night-owl-radio-014.jpg" alt="night owl logo">
+      <p>Night Owl Pizza's for you night owls</p>
+      <p>Fri - Sun 8pm - 3am</p>
+      <p>Closed Mon - Thurs</p>
+    </div>
+  </section>
   
   <div class="container">
-    <form id="customer-order">
-      <h2>Order</h2>
-      <div class="pizza-order">
+    <h2 id="order-btn"><button type="button" class="btn">Order</button></h2>
+    <div id="pizza-order" class="hidden">
+      <form id="customer-order">
         <div class ="size-selector">
           <h3 id="p-size">Pizza Size</h3>
           <select class="size-form" id="pizza-size">
@@ -64,12 +73,12 @@
           <label for="pineapp">Pineapple</label>
         </div>
         <button type="submit" class="btn">Submit Order</button>
-      </div>
-    </form>
+      </form>
+    </div>
 
     <div class="container">
       <div id="order-total" class="hidden">
-        <h2>Your Order</h2>
+        <h2>button>Your Order</h2>
         <p>A <span class="return-size"></span></p>
         <p> <span class="return-crust"></span></p>
         <p>with <span class="return-toppings"></span></p>

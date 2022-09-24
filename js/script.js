@@ -51,6 +51,10 @@ Pizza.prototype.fullOrder = function () {
   });
 }*/
 
+function showOrderForm() {
+  document.getElementById("pizza-order").removeAttribute("class");
+}
+
 function handleOrderSubmit(event) {
   event.preventDefault();
   const selectedSize = document.getElementById("pizza-size").value;
@@ -73,4 +77,5 @@ function handleOrderSubmit(event) {
 
 window.addEventListener("load", function() {
   document.querySelector("form#customer-order").addEventListener("submit", handleOrderSubmit);
+  this.document.getElementById("order-btn").addEventListener("click", showOrderForm());
 })
