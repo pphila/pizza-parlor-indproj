@@ -5,6 +5,6 @@ function Pizza(size, crust, toppings) {
 }
 
 Pizza.prototype.toppingsArr = function () {
-  const choiceToppings = ["vegan cheese", "pepperoni", "sausage", "canadian bacon", "mushroom", "green pepper", "pineapple"];
+  const choiceToppings = ["vegan cheese", "mozzarella", "pepperoni", "sausage", "canadian bacon", "mushroom", "green pepper", "pineapple"];
   return choiceToppings;
 }

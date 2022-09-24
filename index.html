@@ -10,13 +10,68 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <header>
-    <h1>Pizza Planet</h1>
-  </header>
-  <form id="pizza-toppings">
-    <div class="form-group">
-      <div class=""></div>
+  <div class="jumbotron">
+    <header>
+      <h1>Pizza Planet</h1>
+    </header>
+  </div>
+  <hr>
+  <div id="about">
+    <h2>Welcome to Pizza Planet</h2>
+    <p>Home of out of this world pizza</p>
+  </div>
+  
+  <div class="container">
+    <form id="customer-order">
+      <h2>Order</h2>
+      <div class="pizza-order">
+        <div class ="size-selector">
+          <h3 id="p-size">Pizza Size</h3>
+          <select class="size-form" id="pizza-size">
+            <option value="sm">Personal(small)</option>
+            <option value="med">Medium</option>
+            <option value="lg">Large</option>
+          </select>
+        </div>
+        <br>
+        <div class="crust-selector">
+          <h3 id="p-crust">Crust</h3>
+          <select class="crust-form" id="crust">
+            <option value="thin">Thin</option>
+            <option value="reg">Traditional</option>
+            <option value="thick">Detroit Thicc</option>
+            <option value="veg">Vegan</option>
+          </select>
+        </div>
+        <br>
+        <div class="topp-selector">
+          <h3 id="p-topps">Toppings</h3>
+          <input type="checkbox" id="vegan-ch" name="topping" value="vegan-ch">
+          <label for="vegan-ch">Vegan cheese</label>
+          <input type="checkbox" id="mozz" name="topping" value="mozz">
+          <label for="mozz">Mozzarella</label>
+          <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+          <label for="peppe">Pepperoni</label>
+          <input type="checkbox" id="sausage" name="topping" value="sausage">
+          <label for="sausage">Sausage</label>
+          <input type="checkbox" id="can-b" name="topping" value="can-b">
+          <label for="can-b">Canadian Bacon</label>
+          <input type="checkbox" id="mushy" name="topping" value="mushy">
+          <label for="mushy">Mushrooms</label>
+          <input type="checkbox" id="grn-pepp" name="topping" value="grn-pepp">
+          <label for="grn-pepp">Green Peppers</label>
+          <input type="checkbox" id="pineapp" name="topping" value=" pineapp">
+          <label for="pineapp">Pineapple</label>
+        </div>
+        <button type="submit" class="btn">Submit Order</button>
+      </div>
+    </form>
+
+    <div id="order-total" class="hidden">
+      <div class="container">
+        <h2>Your Total for:</h2>
+      </div>
     </div>
-  </form>
+  </div>
 </body>
 </html>
