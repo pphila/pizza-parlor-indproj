@@ -60,16 +60,17 @@ function handleOrderSubmit(event) {
   for (let i=0; i<selectedToppings.length; i++) {
   toppingsArr.push(selectedToppings[i].value)
   };
+  
   const newOrder = new Pizza(selectedSize, selectedCrust, selectedToppings);
   let totalCost = newOrder.pizzaCost();
   let viewToppings = toppingsArr.join(", ");
+  document.getElementById("order-total").removeAttribute("class");
   document.querySelector(".return-size").innerText = selectedSize;
   document.querySelector(".return-crust").innerText = selectedCrust;
-  document.querySelector(".retun-toppings").innerText = viewToppings;
+  document.querySelector(".return-toppings").innerText = viewToppings;
   document.querySelector(".return-total").innerText = totalCost;
 }
 
 window.addEventListener("load", function() {
   document.querySelector("form#customer-order").addEventListener("submit", handleOrderSubmit);
-  document.getElementById("order-total").removeAttribute("class");
 })
