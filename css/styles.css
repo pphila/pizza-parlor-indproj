@@ -1,4 +1,4 @@
-/*global*/
+/*Universal*/
 
 body {
   background-color: black;
@@ -36,11 +36,43 @@ body {
   font-size: 5rem;
 }
 
+.navbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  
+}
+
+.navbar ul {
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar ul li a:hover {
+  background-color: white;
+  box-shadow: 0 0 10px, white;
+}
+
+#phone {
+  float: right;
+  margin-right: 10px;
+  margin-top: 2px;
+  background-color: black;
+  border: 2px white;
+}
+
 #about {
   text-align: center;
   margin: 15px;
   padding: 10px;
-  font-size
 }
 
 #about h2 {
@@ -55,6 +87,22 @@ body {
   height: 600px;
 }
 
+.info-pic img {
+  height: 680px;
+  width: auto;
+  margin: 15px;
+  justify-content: right;
+  float: left;
+}
+
+.info-pic p {
+  float: right;
+  width: 400px;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  padding: 10px;
+}
+
 /*Form Section*/
 #pizza-order {
   margin-top: 20px;
@@ -66,6 +114,12 @@ label {
   padding: 15px;
 }
 
+#order-btn a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+}
+
 /*Total Section*/ 
 
 #order-total {
@@ -73,3 +127,4 @@ label {
   text-align: center;
   font-size: 1.5rem;
 }
+

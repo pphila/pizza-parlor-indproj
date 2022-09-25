@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +14,39 @@
 </head>
 <body>
   <section id="header">
-      <header>
-        <h1>It's Night Owl Pizza!</h1>
-      </header>
+        <h1>Night Owl Pizza</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">Info</a></li>
+          <li><a href="#order-btn">Order</a></li>
+        </ul>
+        
+      </nav>
+      <div id="phone">
+          <p>(503) owl-club</p>
+        </div>
     <hr>
   </section>
 
   <section>
     <div id="about">
-      <h2>It has the juice!</h2>
-      <p>I can't imagine a more beautiful thing.</p>
+      <h2>For the debauchery afterwards</h2>
+      <p>Late night pizza, I can't imagine a more beautiful thing.</p>
       <img src="https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/05115946/night-owl-radio-014.jpg" alt="night owl logo">
       <p>Night Owl Pizza's for those who are still up for the afters</p>
       <p>Fri - Sun 8pm - 3am</p>
       <p>Closed Mon - Thurs</p>
     </div>
+
+    <div class="info-pic">
+      <img src="img/woodfired.jpg" alt="pizza oven">
+      <p>This pizza parlor caters to the graveyard shifters, the clubbers, the vampires, however you identify yourself. This spot is for you. Bringing you true woodfired pizza to your add to your night time antics.</p>
+    </div>
   </section>
   
   <div class="container">
-    <h2 id="order-btn"><button type="button" class="btn">Order Online!</button></h2>
+    <h2 id="order-btn"><button type="button" class="btn"><a href="#submit-order">Order Online!</a></button></h2>
     <div id="pizza-order" class="hidden">
       <form id="customer-order">
         <div class ="size-selector">
@@ -73,7 +87,7 @@
           <input type="checkbox" id="pineapp" name="topping" value=" pineapples">
           <label for="pineapp">Pineapple</label>
         </div>
-        <button type="submit" class="btn">Submit Order</button>
+        <button id="submit-order" type="submit" class="btn">Submit Order</button>
       </form>
     </div>
 
