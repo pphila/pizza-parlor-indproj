@@ -4,28 +4,36 @@ body {
   background-color: black;
   color: whitesmoke;
   font-weight: 600;
-  display: gird;
+  display: grid;
+  font-family: 'Squada One', cursive;
 }
 
-//.hidden {
+.hidden {
   display: none;
 }
 
 .btn {
   font-size: 2rem;
-  color: white;
-}
-
-.btn:hover {
   background-color: white;
   color: black;
 }
 
+.btn:hover {
+  background-color: white;
+  box-shadow: 0 0 6px white;
+  color: black;
+}
+
 /*Header section*/
-.jumbotron {
+#header {
+  font-family: 'MuseoModerno', cursive;
   text-align: center;
   margin: 20px;
   font-weight: 600;
+}
+
+#header h1 {
+  font-size: 5rem;
 }
 
 #about {
@@ -51,8 +59,17 @@ body {
 #pizza-order {
   margin-top: 20px;
   padding: 20px;
+  font-size: 1.5rem;
 }
 
 label {
   padding: 15px;
+}
+
+/*Total Section*/ 
+
+#order-total {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
 }

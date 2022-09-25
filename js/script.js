@@ -30,23 +30,7 @@ Pizza.prototype.pizzaCost = function () {
   return defaultPrice;
 }
 
-/*Pizza.prototype.fullOrder = function () {
-  return this.size + " " + this.size + " with " + this.toppings;
-}*/
-
 //User Interface Logic
-
-/*function listOrder(orderTodisplay) {
-  let orderTotalDiv = document.querySelector("div#order-total");
-  orderTotalDiv.innerText = null;
-  const totalH2 = document.createElement("h2");
-  Object.keys(orderTodisplay.Pizza).forEach(function(key) {
-    const order = orderTodisplay.pizzaCost(key);
-    const li = document.createElement("li");
-    li.append(order.fullOrder());
-    totalH2.append(li);
-  });
-}*/
 
 function showOrderForm() {
   document.getElementById("pizza-order").removeAttribute("class");
